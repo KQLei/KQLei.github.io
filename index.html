@@ -2,409 +2,500 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>安徽信息工程学院</title>
-		<link rel="stylesheet" href="css/CopePagenew_file1.css" />
-		<script type="text/javascript" src="js/Copejidiannew_file.js" language="JavaScript"></script>
+		<title>珍爱网，一个珍惜爱情的网站</title>
+         <link rel="stylesheet" type="text/css" href="css/BeginPage.css"/>        
+		 <script type="text/javascript" src="js/bgeinPage.js"></script>
+		
+		
 	</head>
 
-	<body onload="bnner_Image();Content1ImageBanner();container2centerShowImageBanner()">
-		<div id="body">
-			<!--顶部的头部分-->
-			<div class="clearFix Top">
-				<!--元素的类名可以有多个-->
-				<div id="Top_Recruit">
-					<span>人才招聘：</span>0553-3913517
-				</div>
-				<div id="Top_Advice">
-					<span>招生咨询：</span>0553-3913567
-				</div>
-				<div id="Top_InOffice">
-					<span>学院办公室：</span>0553-3913500
-				</div>
-			</div>
-			<!--顶部的头部分结束-->
-			<!-- 顶部Logo部分-->
-			<div class="clearFix HeadTitle">
-				<div id="Logo">
-					<img src="img/logo.png" />
-				</div>
-
-				<div id="serach">
-					<!--让input框之间没有空隙还可以 给前面 的一个加上浮动-->
-					<input type="text" id="" name="" value="" placeholder="请输出您要搜索的内容" /><input type="button" id="" name=" " value="" style="cursor: pointer;" />
-
+	<body onload="changeProviceAndCity('select_provice','select_city',0),sizeBigImg(),changeProviceAndCity('placeProvice','placeCity',0),changeProviceAndCity('showImg_select_provice','showImg_select_city',0)">
+		<!--网页头开始-->
+		<div id="new_header">
+			<div class="new_wrap">
+				<span><img src="img/bascImg/LogImage.png" /></span>
+				<span><img src="img/bascImg/LogleftImg.png" /></span>
+				<div id="new_header_login" style="float: right;margin-top: 20px;">
+					<form action="#" method="post">
+						<input class="input_name" type="text" name="uesr_name" placeholder="邮箱/ID/手机号" />
+						<input class="input_psw" type="password" name="uesr_psw" placeholder="密码" />
+						<input class="input_go" type="submit" value="登录" />
+						<p style="float: left;margin:0px 10px;font-size: 14px;color: #aaa;">
+							<span style="display: inline-block;padding-top:2px ;">其他登录</span>
+							<a class="openid_qq" href="#" target="_blank" style="background-position:0 0;"></a>
+							<a class="openid_weibo" href="#" target="_blank" style="background-position:-16px 0;"></a>
+							<a class="openid_baidu" href="#" target="_blank" style="background-position:-32px 0;"></a>
+							<a class="openid_zhifubao" href="#" target="_blank" style="background-position:-48px 0;"></a>
+						</p>
+						<span style="font-size: 14px;"><a id="header_forgetpsd" href="#">忘记密码</a></span>
+					</form>
 				</div>
 			</div>
-			<!-- 顶部Logo部分结束-->
-			<!--导航部分 开始       -->
-			<div id="Nav" style="border-top: 1px solid  #e5e5e5;">
-				<div class="w1080" style="border: 0px solid red; width: 1080px; margin: auto;">
-					<ul class="clearFix NavUI">
-						<li><a href="#">首页</a></li>
-						<li><a href="#">学院概况<span id="botIco"></span></a>
-							<ul class="NavUISon">
-								<li><a href="#">学院简介</a></li>
-								<li><a href="#">董事长寄语</a></li>
-								<li><a href="#">院长寄语</a></li>
-								<li><a href="#">学院领导</a></li>
-								<li><a href="#">我的校园 <span id="botIco"></span></a>
-									<ul class="NavUISonSon">
-										<li><a href="#">校园风光</a></li>
-										<li><a href="#">校园实景</a></li>
-										<li><a href="#">校园地图</a></li>
-										<li><a href="#">校园文化</a></li>
+		</div>
+		<!--网页头结束-->
 
-									</ul>
+		<!--网页注册部分开始-->
+		<div id="new_user_reg">
+			<div class="new_wrap">
+				<div id="new_from_reg" style="cursor:default;background-color: #FFFEFD;">
+					<form action="#" method="post">
+						<h2 id="new_from_reg_title">花费一分钟，享一辈子幸福</h2>
 
-								</li>
-							</ul>
+						<dl>
+							<dt>性别</dt>
+							<dd>
+								<input type="radio" name="sex" id="sexM" value="m" />
+								<label for="sexM" class="nan sex" style="margin-right: 30px;">男</label>
+								<input type="radio" name="sex" id="sexF" value="f" />
+								<label for="sexF" class="nv sex">女</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt>生日</dt>
+							<dd>
+								<input type="text" name="brithyear" id="byear" /> <span style="position: absolute;left: 160px;color: #666666;">年</span>
+								<input type="text" name="brithmoon" id="bmoon" /><span style="position: absolute;left: 250px;color: #666666;">月</span>
+								<input type="text" name="brithday" id="bday" /><span style="position: absolute;left:340px;color: #666666;">日</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>所在地区</dt>
+							<dd>
+								<select name="provice" id="select_provice" onchange="changeProviceAndCity('select_provice','select_city',1)">					   
+									
+								</select>
+								<select name="city" id="select_city">
+									
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>婚姻状况</dt>
+							<dd>
+								<input type="radio" name="marriage" id="unmarried" value="unmarried" />
+								<label for="unmarried" style="margin-right: 30px;">未婚</label>
+								<input type="radio" name="marriage" id="divorce" value="divorce" />
+								<label for="divorce" style="margin-right: 30px;">离婚</label>
+								<input type="radio" name="marriage" id="bereft" value="bereft" />
+								<label for="bereft">丧偶</label>
+							</dd>
+						</dl>
+						<input type="submit" value="免费注册" id="new_from_reg_submit" />
+						<span style="text-align: center;display: block;"><a href="#" id="isnum_login">我是会员,立即登录</a></span>
+					</form>
+				</div>
 
-						</li>
-						<li><a href="#">机构设置<span id="botIco"></span></a>
-							<ul class="NavUISon">
-								<li><a href="#">机关部门</a></li>
-								<li><a href="#">教学系部</a></li>
+			</div>
+		</div>
+		<!--网页注册部分结束-->
 
-							</ul>
-						</li>
-						<li><a href="#">教育教学<span id="botIco"></span></a>
-							<ul class="NavUISon">
-								<li><a href="#">专业设置</a></li>
-								<li><a href="#">师资力量</a></li>
-								<li><a href="#">办学特色</a></li>
-								<li><a href="#">教改实践</a></li>
-								<li><a href="#">教学成果</a></li>
-								<li><a href="#">科研工作</a></li>
-							</ul>
-						</li>
-						<li><a href="#">招生就业<span id="botIco"></span></a>
-							<ul class="NavUISon">
-								<li><a href="#">学院招生信息网</a></li>
-								<li><a href="#">学生就业信息网</a></li>
-							</ul>
-						</li>
-						<li><a href="#">学团工作<span id="botIco"></span></a>
-							<ul class="NavUISon">
-								<li><a href="#">共青团工作</a></li>
-								<li><a href="#">学生事务中心</a></li>
-								<li><a href="#">党建工作</a></li>
-								<li><a href="#">校园文化</a></li>
-							</ul>
-						</li>
-						<li><a href="#">交流合作<span id="botIco"></span></a>
-							<ul class="NavUISon">
-								<li><a href="#">对外交流</a></li>
-								<li><a href="#">校企合作</a></li>
-							</ul>
-						</li>
-						<li><a href="#">公共服务<span id="botIco"></span></a>
-							<ul class="NavUISon">
-								<li><a href="#">规章制度</a></li>
-								<li><a href="#">政策法规</a></li>
-								<li><a href="#">招标公告</a></li>
-								<li><a href="#">学生服务</a></li>
-								<li><a href="#">下载中心</a></li>
-								<li><a href="#">访客留言</a></li>
-							</ul>
-						</li>
-						<li><a href="#">人才招聘<span id="botIco"></span></a>
-							<ul class="NavUISon">
-								<li><a href="#">招聘公告</a></li>
-								<li><a href="#">招聘职位</a></li>
-								<li><a href="#">人才理念</a></li>
-								<li><a href="#">人才政策</a></li>
-							</ul>
-						</li>
+		<!--网页注册下面的宣传语开始-->
+		<div id="new_publist">
+			<div class="new_wrap">
+				<div id="new_publist_img"></div>
+			</div>
+		</div>
+		<!--网页注册下面的宣传语结束-->
+
+		<!--单身贵族的照片展示开始-->
+		<div id="new_user_best">
+			<div class="new_wrap">
+				<h2>1.7亿优质会员，就在眼前</h2>
+				<div class="waterfall">
+					<div class="itme_list" style="position: relative;">
+						<div class="itme_list_label" id="itme_list_label">
+							<a href="javascript:;" class="a1" onclick="bestImgChg('itme_list_label',this,'wumei','1')">妩媚</a>
+							<a href="javascript:;" class="a2" onclick="bestImgChg('itme_list_label',this,'roumei','1')">柔美</a>
+							<a href="javascript:;" class="a3" onclick="bestImgChg('itme_list_label',this,'all','1')">全部</a>
+							<a href="javascript:;" class="a4" onclick="bestImgChg('itme_list_label',this,'qingchu','1')">清纯</a>
+							<a href="javascript:;" class="a5" onclick="bestImgChg('itme_list_label',this,'keai','1')">可爱</a>
+							<a href="javascript:;" class="a6" onclick="bestImgChg('itme_list_label',this,'youya','1')">优雅</a>
+							<a href="javascript:;" class="a7" onclick="bestImgChg('itme_list_label',this,'qizhi','1')">气质</a>
+							<a href="javascript:;" class="a8" onclick="bestImgChg('itme_list_label',this,'xinnan','1')">型男</a>
+							<a href="javascript:;" class="a9" onclick="bestImgChg('itme_list_label',this,'duanfa','1')">短发</a>
+						</div>
+						<div id="vip_data" class="vip_data">
+							<div class="vip_data_pos1">
+								<img src="img/best_img_wumei/1.jpg" id="vip_data_pos1_img" class="vip_data_pos1_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos2">
+								<img src="img/best_img_wumei/2.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos3">
+								<img src="img/best_img_wumei/3.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos4">
+								<img src="img/best_img_wumei/4.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos5">
+								<img src="img/best_img_wumei/5.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos6">
+								<img src="img/best_img_wumei/6.jpg" class="vip_data_pos1_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos7">
+								<img src="img/best_img_wumei/7.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos8">
+								<img src="img/best_img_wumei/8.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos9">
+								<img src="img/best_img_wumei/9.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos10">
+								<img src="img/best_img_wumei/10.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos11">
+								<img src="img/best_img_wumei/11.jpg" class="vip_data_pos1_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos12">
+								<img src="img/best_img_wumei/12.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos13">
+								<img src="img/best_img_wumei/13.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos14">
+								<img src="img/best_img_wumei/14.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos15">
+								<img src="img/best_img_wumei/15.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos16">
+								<img src="img/best_img_wumei/16.jpg" class="vip_data_pos1_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos17">
+								<img src="img/best_img_wumei/17.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos18">
+								<img src="img/best_img_wumei/18.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="best_search">
+					<ul>
+						<form id="index_search_form" name="index_search_form" method="get" target="_blank" action="http://search.jiayuan.com/">
+							<input type="hidden" name="avatar" value="1" />
+							<li class="s_1">
+								<div class="search_ico"></div>
+								<b>更多优质会员，请搜索</b>
+							</li>
+							<li class="s_2">
+								<b>我要找</b>
+								<div class="drop_down">
+									<select name="drop_down_sex">
+										<option value="">男朋友</option>
+										<option value="">女朋友</option>
+									</select>
+								</div>
+							</li>
+							<li class="s_2">
+								<b>年龄</b>
+								<div class="drop_down drop_down_age">
+									<input type="text" name="minAge" id="minAge" value="" style="width: 50px;height:28px;padding-left:20px ;" />
+									<span id="minAgeLeft">岁</span>
+									<span>——</span>
+									<input type="text" name="maxAge" id="maxAge" value="" style="width: 50px;height:28px;padding-left:20px ;" />
+									<span id="maxAgeRight">岁</span>
+								</div>
+							</li>
+							<li class="s_2">
+								<b>地区</b>
+								<div class="drop_down drop_down_location">
+									<select name="place" id="placeProvice" onchange="changeProviceAndCity('placeProvice','placeCity',1)">
+										
+									</select>
+									<select name="place" id="placeCity">
+										
+									</select>
+								</div>
+							</li>
+							<li class="s_3"><input type="submit" class="search_go" value="搜索" style="width: 102px; height:29px; padding-left: 10px;margin-left: 10px;" /></li>
+						</form>
 					</ul>
 
 				</div>
-			</div>
-			<!--导航部分 结束       -->
-			<!--图片轮转开始-->
-
-			<div id="js_banner">
-				<span class="leftImage"> <img src="img/bannerPrev.png" onclick="LastImage()" onmouseover="changeIndex()" onmouseout="beginImge()"/></span>
-				<span class="rightImage"><img src="img/bannerNext.png" onclick="NextImage()" onmouseover="changeIndex()" onmouseout="beginImge()"/></span>
-				<span class="titleOne"></span>
-				<span class="titletwo"></span>
-				<div class="ShowImage">
-					<img id="Image_banner" src="img/1.jpg" />
-				</div>
-
-				<ul id="sel_Btu">
-					<li id="Image1" onmouseover="stopImage(1)" onmouseout="beginImge()"></li>
-					<li id="Image2" onmouseover="stopImage(2)" onmouseout="beginImge()"></li>
-					<li id="Image3" onmouseover="stopImage(3)" onmouseout="beginImge()"></li>
-					<li id="Image4" onmouseover="stopImage(4)" onmouseout="beginImge()"></li>
-				</ul>
-				<p class="p1" id="Image1p1">产业工程师 创业企业家的摇篮</p>
-				<p class="p2" id="Image1p2">2016年安徽信息工程学院招生简章 </p>
-				<p class="p1" id="Image2p1">我院课题喜获年度高校省级科学研究重点项目立项</p>
-				<p class="p2" id="Image2p2">我院6项课题喜获2015年度安徽省高校省级科学研究重点项目立项 </p>
-				<p class="p1" id="Image3p1">我院举行电子产品设计大赛</p>
 
 			</div>
 
-			<div class="clearFix container1" style="border: 0px solid red; width: 1080px;margin: auto; margin-top: 10px;">
-
-				<div id="left" style="border: 0px solid red; width: 387px;float: left; ">
-					<div id="title" style="border:0px solid red; width: 387px;height: 22px;">
-						<ul class="clearFix leftTitle" id="leftTitle">
-							<li class="on" onmouseover="ShowleftContent(this,1)">学校要闻</li>
-							<li onmouseover="ShowleftContent(this,2)">系部动态</li>
-							<li onmouseover="ShowleftContent(this,3)">电子专栏</li>
-							<li><a href="#" style="font-size: 12px;">更多</a></li>
-						</ul>
-					</div>
-					<div class="LeftContent">
-						<ul id="LeftOneContent">
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3262">【优秀毕业生系列采访之二】张脉：创业，永不止步</a><span>05-26</span></li>
-
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3260">“馨语之春”感动校园   我院学生完美演绎青春心理剧</a><span>05-26</span></li>
-
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3257">市科技局领导杨少华在我院举行创新创业讲座</a><span>05-26</span></li>
-
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3233">我院师生在计算机设计大赛安徽省级赛表现出色</a><span>05-23</span></li>
-
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3236">【媒体关注 ● 中国青年报】只有“应用型”老师才能培养出“应用型”学生</a><span>05-24</span></li>
-
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3235">【媒体关注 ● 中国青年报】语音智能大王独资办应用型大学</a><span>05-24</span></li>
-
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3229">不做超人做大白 心理危机干预技巧多 ：安徽工程大学机电学院2016辅导员培训之二</a><span>05-23</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3220">【专利创新创业大赛】创新激荡 智慧迸发：管理工程系专利大赛不断向纵深推进</a><span>05-20</span></li>
-						</ul>
-						<ul id="LeftTwoContent">
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3259">创促中心举办CG行业创业经验分享暨13级动画专业实习宣讲会</a><span>05-26</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3258">机械工程系举办企业实习宣讲会</a><span>05-26</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3256">我与学长面对面：艺术设计系举行考研经验交流会</a><span>05-26</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3239">信息工程系顺利举行2012级毕业生毕业设计答辩</a><span>05-24</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3237">我院机械工程系学生会赴皖南医学院学习交流</a><span>05-24</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3234">机械工程系2012级毕业论文一次答辩工作顺利完成</a><span>05-24</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3231">计算机与软件工程系举行2016届毕业设计（论文）答辩</a><span>05-23</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3230">计算机与软件工程系成功举办创客实验室交流会</a><span>05-23</span></li>
-						</ul>
-						<ul id="LeftThreeContent">
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3206">《安徽工程大学机电学院报》第十五期</a><span>05-18</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3073">《安徽工程大学机电学院报》第十四期</a><span>04-18</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=2940">《安徽工程大学机电学院报》第十三期</a><span>03-18</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=2793">《安徽工程大学机电学院报》第十二期</a><span>12-28</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=2703">《安徽工程大学机电学院报》第十一期</a><span>11-25</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=2696">安徽工程大学机电学院第五期视频新闻</a><span>11-21</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=2601">《安徽工程大学机电学院报》第十期</a><span>10-30</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=2547">《安徽工程大学机电学院报》第九期</a><span>09-29</span></li>
-						</ul>
-					</div>
-
-				</div>
-				<div id="right" style="border: 0px solid red; width: 387px;float: right;">
-					<div id="title" style="border: 0px solid red; width: 387px;height: 22px;">
-						<ul class="clearFix rightTitle" id="rightTitle">
-							<li class="on" onmouseover="ShowrightContent(this,1)">通知公告</li>
-							<li onmouseover="ShowrightContent(this,2)">学术信息</li>
-							<li><a href="#" style="font-size: 12px;">更多</a></li>
-						</ul>
-					</div>
-					<div class="rightContent">
-						<ul id="RrightOneContent">
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3266">关于组织开展安徽工程大学机电学院2016年“双创之星·技能文化节”系列活动的通知</a><span>05-25</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3265">关于做好我院2016年生源地信用助学贷款学生毕业确认工作的通知</a><span>05-25</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3264">关于举办安徽工程大学机电学院第二届“互联网+”大学生创新创业大赛的通知</a><span>05-25</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3243">第十四周 会议安排（2016.5.23-5.27）</a><span>05-24</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3228">关于举办安徽工程大学机电学院专利大赛“创意、创作、创新”头脑风暴系列活动的通知</a><span>05-06</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3227">关于开展2016年学生资助诚信教育主题月活动的通知</a><span>05-13</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3226">关于印发《安徽工程大学机电学院2016届毕业生派遣与文明离校工作方案》的通知</a><span>05-18</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3217">关于A19、A20宿舍电费收缴的通知</a><span>05-20</span></li>
-						</ul>
-						<ul id="RightTwoContent">
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3232">【名师讲席】关于举办【自我认知与沟通技巧】讲座的通知</a><span>05-23</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3152">【名师讲席】关于举办【大学生数学竞赛的解题技巧】讲座的通知</a><span>05-03</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3145">【名师讲席】关于举办【数控技术，计算机辅助设计在企业中的应用】讲座的通知</a><span>04-25</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3120">【行业讲座】关于举办【职业选择与职业规划】讲座的通知</a><span>04-26</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3045">【名师讲席】关于举办【专利报告编写注意事项之二】讲座的通知</a><span>04-12</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3044">【名师讲席】关于举办【专利报告编写注意事项之一】讲座的通知</a><span>04-12</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3027">【行业讲座】关于举办【企业信息化的前景、挑战和机遇】讲座的通知</a><span>04-11</span></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=show&amp;id=3026">【名师讲席】关于举办【工业设计大赛暨专利大赛经验分享】讲座的通知</a><span>04-11</span></li>
-						</ul>
-
-					</div>
-				</div>
-
-				<div id="center" style="width: 290px;height:260px; margin: auto;">
-					<a href="#">
-						<div id="Content1Image">
-							<img id="Content1ImageShow" src="img/165.jpg" style="width: 290px; height: 222px;" />
-						</div>
-						<div id="Content1ImageTitle">
-							<div id="ImageTilte165" class="ImageTitle2">熔炼团队 提升自我——记新芜校..</div>
-							<div id="ImageTilte166" class="ImageTitle2">市科技局领导赵雪松应邀来我院举..</div>
-							<div id="ImageTilte167" class="ImageTitle2">不做超人做大白 心理危机干预技..</div>
-							<div id="ImageTilte168" class="ImageTitle2">我院学生陆新在全省“讯飞杯”大..</div>
-							<div id="ImageTilte169" class="ImageTitle2">“馨语之春”感动校园 我院学..</div>
-						</div>
-					</a>
-
-				</div>
-			</div>
-
-			<div class="clearFix container2" style="margin-top: 50px; background-color: #f8f8f8;">
-
-				<div class="clearFix w1080" style="width: 1080px; margin: auto;">
-
-					<div id="ServiceExperss" style="width: 414px;float: left; ">
-						<span id="ServiceExperssTitle">
-                        	服务速递
-                        </span>
-						<ul id="ServiceExperssHyperLink">
-							<li><a href="http://172.16.1.31/GOfficeSSOServer/CLogin.aspx" target="_blank">O A 系统</a></li>
-							<li><a href="http://mail.ahpumec.edu.cn/" target="_blank">邮件系统</a></li>
-							<li><a href="http://jw.ahpumec.edu.cn:10000/jwweb/" target="_blank">教务系统</a></li>
-							<li><a href="http://lib.ahpumec.edu.cn/index.aspx" target="_blank">图书资源</a></li>
-							<li><a href="http://www.ahpumec.edu.cn/index.php?c=content&amp;a=list&amp;catid=8">人才招聘</a></li>
-							<li><a href="http://bylw.ahpumec.edu.cn/" target="_blank">毕业设计</a></li>
-							<li><a href="http://60.169.24.2:8080/#userconsent#" target="_blank">报修系统</a></li>
-							<li><a href="http://jw.ahpumec.edu.cn:10000/jwweb/" target="_blank">学籍查询</a></li>
-						</ul>
-
-					</div>
-					<div id="container2right">
-
-						<ul id="container2rightImageHyperLink">
-							<li>
-								<a href="#"><img src="img/contactBtn1.jpg" /></a>
-							</li>
-							<li>
-								<a href="#"><img src="img/contactBtn2.jpg" /></a>
-							</li>
-							<li>
-								<a href="#"><img src="img/contactBtn3.jpg" /></a>
-							</li>
-							<li>
-								<a href="#"><img src="img/contactBtn4.jpg" /></a>
-							</li>
-						</ul>
-					</div>
-					<div id="container2center" style="width: 299px;height: 144px; margin-left:420px;">
-						<div id="container2centerTitle">
-							<span id="ServiceExperssTitle">
-                        	专题专栏
-                          </span>
-							<img src="img/topicNextBtn.jpg" id="topicNextBtn" onclick="container2centerImageNextBtn()" onmouseover="container2ChangeImagePath()" onmouseout="container2BeginImage()" />
-							<img src="img/topicTogPrev.jpg" id="topicTogPrev" onclick="container2centerImageTogPrev()" onmouseover="container2ChangeImagePath()" onmouseout="container2BeginImage()" />
-						</div>
-						<a href="#"><img src="img/212.jpg" id="container2centerShowImage" /></a>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="clearFix w1080" style="border: 0px solid red; width: 1080px; margin: auto; margin-top: 50px;">
-				<a href="#">
-					<div id="Image235" class="Content3Iamge" style="background-image: url(img/235.jpg);">
-					</div>
-					<div id="content1" style="background-color: #6A2496;" onmouseover="changeContent3Image(235)" onmouseout="ReturnContent3Image(235)">
-						<span id="activiteBox1">
-                             	“馨语之春”感动校园 我院学生完美演绎青春心理剧
-                    </span>
-					</div>
-				</a>
-				<a href="#">
-					<div id="Image236" class="Content3Iamge" style="background-image: url(img/236.jpg);">
-
-					</div>
-					<div id="content2" style="background-color: #186556;" onmouseover="changeContent3Image(236)" onmouseout="ReturnContent3Image(236)">
-						<span id="activiteBox1">
-                             	奉献月里献爱心，万千雷锋创奇迹（一）——“情暖三月，快乐奉献”捐赠活动
-                   </span>
-					</div>
-				</a>
-
-				<a href="#">
-					<div id="Image237" class="Content3Iamge" style="background-image: url(img/237.jpg);">
-
-					</div>
-					<div id="content3" style="background-color: #771D5C;" onmouseover="changeContent3Image(237)" onmouseout="ReturnContent3Image(237)">
-						<span id="activiteBox1" style="margin-left: 10px;">
-                             	           风雨学子风，诗意讯飞情
-                  </span>
-					</div>
-				</a>
-
-				<a href="#">
-					<div id="content4" style="background-color: #245A96;" onmouseover="changeContent3Image(238)" onmouseout="ReturnContent3Image(238)">
-						<span id="activiteBox1">
-                             	           以支教传递爱  走进“留守儿童之家”
-                   </span>
-					</div>
-					<div id="Image238" class="Content3Iamge" style="background-image: url(img/238.jpg);">
-
-					</div>
-				</a>
-
-				<a href="#">
-					<div id="content5" style="background-color: #9E5526;" onmouseover="changeContent3Image(239)" onmouseout="ReturnContent3Image(239)">
-						<span id="activiteBox1">
-                             	奉献月里献爱心，万千雷锋创奇迹（二）——“雷锋精神伴我行，清晰你我新视界”免费洗眼镜活动
-                    </span>
-					</div>
-					<div id="Image239" class="Content3Iamge" style="background-image: url(img/239.jpg);">
-
-					</div>
-				</a>
-
-				<a href="#">
-					<div id="content6" style="background-color: #962434;" onmouseover="changeContent3Image(240)" onmouseout="ReturnContent3Image(240)">
-						<span id="activiteBox1">
-                             	 奉献月里献爱心，万千雷锋创奇迹（一）——“情暖三月，快乐奉献”捐赠活动
-                    </span>
-					</div>
-					<div id="Image240" class="Content3Iamge" style="background-image: url(img/240.jpg);">
-
-					</div>
-				</a>
-			</div>
-			<!--底部开始-->
-			<div class="container4">
-				<div class="container4bg" style="background-color:#1D1F2B ;">
-					<div class="clearFix foot" style="width:1080px; margin: auto; margin-top:20px ;margin-bottom:20px;">
-
-						<div id="Logo2" style="margin:30px 81px 0px 0px;">
-							<img src="img/footerLogo.jpg" />
-							<p style="font-size: 12px;">版权所有 安徽信息工程学院 | 皖ICP备
-								<!--备案号-->10016294
-								<!--备案号-->号</p>
-						</div>
-						<div id="lianjie1" style="margin:30px 70px 30px 0px;">
-							<h4 style="color: white;margin-bottom: 5px;">校内网站链接</h4>
-							<ul>
-								<li><a href="#">教务处管理系统 </a></li>
-								<li><a href="#">学院三维全景地图 </a></li>
-								<li><a href="#">网站后台管理 </a></li>
-								<li><a href="#"> 访问旧网站</a></li>
-							</ul>
-						</div>
-						<div id="lianjie2" style="margin:30px 70px 0px 0px;">
-							<h4 style="color: white; margin-bottom: 5px;" ">教育类网站链接</h4>
-						<ul>
-							<li><a href="# ">教育部网站 </a></li>
-							<li><a href="# ">安徽省教育厅 </a></li>							
-						</ul>
-					</div>
-					<div id="lianjie3 " style="margin:50px 60px 0px 0px; ">
-						<ul>
-							<li><a href="# ">河海大学文天学院 </a></li>
-							<li><a href="# ">安徽师范大学皖江学院 </a></li>							
-						</ul>
-					</div>	
-					
-					 <div id="Logo3 " style="margin-top: 50px; ">
-                           <img src="img/friendParner1.jpg "/>
-					</div>
-				   </div>				 
-				</div>				
-			</div>
-<!--底部结束-->
 		</div>
+		<!--单身贵族的照片展示结束-->
 
+		<!--成功结婚的照片展示开始-->
+		<div id="new_user_succeed">
+			<div class="new_wrap">
+				<h2 class="sprite">就在你身边，他们相爱啦！</h2>
+				<div style="display: block;position: absolute;top: 10px;right: 0;" class="love_count">
+					<ul>
+						<li>已经有</li>
+						<li class="num" style="padding: 0 0 0 10px;"><i>1</i><i>3</i><i>8</i><i>4</i><i>3</i><i>7</i><i>5</i><i>2</i></li>
+						<li>人找到幸福了</li>
+					</ul>
+				</div>
+				<div class="love_case">
+					<div class="item label" id="item_label_a">
+						<a href="javascript:;" class="a1" style="top: 0px;left: 0px;" onclick="bestImgChg('item_label_a',this,'sanzhe','2')">一波三折</a>
+						<a href="javascript:;" class="a2" style="top: 0px;left: 81px;" onclick="bestImgChg('item_label_a',this,'zaihun','2')">再婚</a>
+						<a href="javascript:;" class="a3 " style="top: 41px;left:0px;" onclick="bestImgChg('item_label_a',this,'langcai','2')">郎才女貌</a>
+						<a href="javascript:;" class="a4" style="top: 41px;left: 81px;" onclick="bestImgChg('item_label_a',this,'xinnan','2')">型男</a>
+						<a href="javascript:;" class="a5" style="top: 82px;left: 0px;" onclick="bestImgChg('item_label_a',this,'zhongqin','2')">一见钟情</a>
+						<a href="javascript:;" class="a6" style="top: 82px;left: 81px;" onclick="bestImgChg('item_label_a',this,'danqing','2')">单亲妈妈</a>
+						<a href="javascript:;" class="a7" style="top: 123px;left: 0px;" onclick="bestImgChg('item_label_a',this,'80hou','2')">80后</a>
+						<a href="javascript:;" class="a8" style="top: 123px;left: 81px;" onclick="bestImgChg('item_label_a',this,'jianchi','2')">坚持</a>
+					</div>
+					<div class="love_data" id="love_data">
+						<div style="opacity: 1; top: 0;left: 168px;" class="item tm pos1" >
+							<a data_sid="417495" data_user_name="开心 &amp; 保密" data_love_data="2015.07.30" href="javascript:"><img src="img/successImg_langcai/1.jpg"  class="succeed_img" >
+								<div class="user_name"><i><em>开心 &amp; 保密</em><em>2015.07.30</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top: 0;left: 336px;" class="item tm pos2" >
+							<a data_sid="158963" data_user_name="茹 &amp; 旁白.." data_love_data="2011.02.20" href="javascript:"><img src="img/successImg_langcai/2.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>茹 &amp; 旁白..</em><em>2011.02.20</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top: 0px;left: 504px;" class="item tm pos3">
+							<a data_sid="317198" data_user_name="无心写意 &amp; 保密" data_love_data="2012.12.08" href="javascript:"><img src="img/successImg_langcai/3.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>无心写意 &amp; 保密</em><em>2012.12.08</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top: 0px;left: 672px;" class="item tm pos4">
+							<a data_sid="299948" data_user_name="妞儿宝贝 &amp; seven" data_love_data="2012.09.04" href="javascript:"><img src="img/successImg_langcai/4.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>妞儿宝贝 &amp; seven</em><em>2012.09.04</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top: 0px;left: 840px;" class="item tm pos5">
+							<a data_sid="66683" data_user_name="旧时光 &amp; 舆世蕪爭" data_love_data="2010.04.23" href="javascript:"><img src="img/successImg_langcai/5.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>旧时光 &amp; 舆世蕪爭</em><em>2010.04.23</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 0px;" class="item tm pos6" >
+							<a data_sid="248815" data_user_name="曦 &amp; 保密" data_love_data="2012.01.28" href="javascript:"><img src="img/successImg_langcai/6.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>曦 &amp; 保密</em><em>2012.01.28</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 168px;" class="item tm pos7">
+							<a data_sid="432095" data_user_name="季末非陌 &amp; 保密" data_love_data="2016.05.23" href="javascript:"><img src="img/successImg_langcai/7.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>季末非陌 &amp; 保密</em><em>2016.05.23</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 336px;" class="item tm pos8" >
+							<a data_sid="432583" data_user_name="他是她的 &amp; 保密" data_love_data="2016.06.08" href="javascript:"><img src="img/successImg_langcai/8.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>他是她的 &amp; 保密</em><em>2016.06.08</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 504px;" class="item tm pos9" >
+							<a data_sid="223039" data_user_name="北方有佳人 &amp; 保密" data_love_data="2011.09.17" href="javascript:"><img src="img/successImg_langcai/9.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>北方有佳人 &amp; 保密</em><em>2011.09.17</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 672px;" class="item tm pos10">
+							<a data_sid="248549" data_user_name="贾男 &amp; 保密" data_love_data="2012.01.26" href="javascript:"><img src="img/successImg_langcai/10.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>贾男 &amp; 保密</em><em>2012.01.26</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left:840px;" class="item tm pos11" >
+							<a data_sid="352034" data_user_name="永恒 &amp; 灰太狼小妞" data_love_data="2013.07.28" href="javascript:"><img src="img/successImg_langcai/11.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>永恒 &amp; 灰太狼小妞</em><em>2013.07.28</em></i><span></span></div>
+							</a>
+						</div>
+						<!--<div style="opacity: 1;" class="item tm pos1" >
+							<a data_sid="417495" data_user_name="开心 &amp; 保密" data_love_data="2015.07.30" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/story_1438742795_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>开心 &amp; 保密</em><em>2015.07.30</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos2" >
+							<a data_sid="158963" data_user_name="茹 &amp; 旁白.." data_love_data="2011.02.20" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/73f6062164_160x160.jpg">
+								<div class="user_name"><i><em>茹 &amp; 旁白..</em><em>2011.02.20</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos3">
+							<a data_sid="317198" data_user_name="无心写意 &amp; 保密" data_love_data="2012.12.08" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/6ad9635096_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>无心写意 &amp; 保密</em><em>2012.12.08</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos4">
+							<a data_sid="299948" data_user_name="妞儿宝贝 &amp; seven" data_love_data="2012.09.04" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/a634098308_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>妞儿宝贝 &amp; seven</em><em>2012.09.04</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos5">
+							<a data_sid="66683" data_user_name="旧时光 &amp; 舆世蕪爭" data_love_data="2010.04.23" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/c87d846247_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>旧时光 &amp; 舆世蕪爭</em><em>2010.04.23</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos6">
+							<a data_sid="248815" data_user_name="曦 &amp; 保密" data_love_data="2012.01.28" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/7daf3c9357_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>曦 &amp; 保密</em><em>2012.01.28</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos7">
+							<a data_sid="432095" data_user_name="季末非陌 &amp; 保密" data_love_data="2016.05.23" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/story_1464140810_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>季末非陌 &amp; 保密</em><em>2016.05.23</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos8">
+							<a data_sid="432583" data_user_name="他是她的 &amp; 保密" data_love_data="2016.06.08" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/story_1465698128_160x160.jpg">
+								<div class="user_name"><i><em>他是她的 &amp; 保密</em><em>2016.06.08</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos9">
+							<a data_sid="223039" data_user_name="北方有佳人 &amp; 保密" data_love_data="2011.09.17" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/017b5c4260_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>北方有佳人 &amp; 保密</em><em>2011.09.17</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos10">
+							<a data_sid="248549" data_user_name="贾男 &amp; 保密" data_love_data="2012.01.26" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/5853ac8722_160x160.jpg">
+								<div class="user_name"><i><em>贾男 &amp; 保密</em><em>2012.01.26</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos11">
+							<a data_sid="352034" data_user_name="永恒 &amp; 灰太狼小妞" data_love_data="2013.07.28" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/865de75745_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>永恒 &amp; 灰太狼小妞</em><em>2013.07.28</em></i><span></span></div>
+							</a>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--成功结婚的照片展示结束-->
+		<!--增值业务展示开始-->
+		<div id="new_liehun">
+			<div class="new_wrap">
+				<div class="new_liehun_ico">
+
+				</div>
+				<h2 class="new_liehun_h2">红娘一对一服务 精准定位你的爱情</h2>
+				<a href="#" class="new_liehun_a">申请服务</a>
+			</div>
+		</div>
+		<!--增值业务展示结束-->
+		<!--网页信息说明和友情链接开始-->
+		<div id="common_foot">
+			<div style="padding-bottom: 0px;" class="hf_foot" id="common_footer">
+				<p id="bottom_nav_link">
+					<a href="http://www.jiayuan.com/helpcenter/postmail.php" target="_blank">联系客服</a><a href="http://www.jiayuan.com/bottom/index.html" target="_blank">关于我们</a>
+					<a href="http://ir.jiayuan.com/" target="_blank">Investor Relations</a>
+					<a href="http://www.jiayuan.com/bottom/connect.html" target="_blank">联系我们</a>
+					<a href="http://www.jiayuan.com/bottom/business.html" target="_blank">无线业务</a>
+					<a href="http://www.jiayuan.com/bottom/declare.html" target="_blank">注册条款</a>
+					<a href="http://www.jiayuan.com/bottom/links.php" target="_blank">友情链接</a>
+					<a href="http://www.jiayuan.com/bottom/jobs.html" target="_blank">招聘信息</a>
+					<a href="http://www.jiayuan.com/bottom/notice.html" target="_blank">交友信息</a>
+					<a href="http://www.jiayuan.com/bottom/private.html" target="_blank">隐私保护</a>
+					<a href="http://www.jiayuan.com/helpcenter/" target="_blank">帮助中心</a>
+					<a href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
+				</p>
+				<p id="bottom_site_copyright" style="">
+					<a class="bot_link_none" href="#">中文实名：珍爱网</a>
+					<a class="bot_link_none" href="#">ICP证书：沪B2-20100074</a>
+					<a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
+					<a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>
+					<a href="http://www.jiayuan.com/certificate/license.html" target="_blank">沪网文[2012]0720-106号</a>
+				</p>
+				<p>
+					©&nbsp;&nbsp;2003-2016&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;京公网安备110105002124号&nbsp;&nbsp;&nbsp;&nbsp;不良和违法信息举报专线：0316-5266032
+				</p>
+			</div>
+		</div>
+		<!--网页信息说明和友情链接结束-->
+		<!--网页最底部链接开始-->
+		<div id="common_power_foot">
+			<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120416163653405" target="_blank"><img src="img/bascImg/index.png" border="0"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;			
+			<span style="display:inline-block;position:relative;width:auto;">
+			<a href="https://ss.knet.cn/verifyseal.dll?sn=e13090211010042252l1a5000000&amp;ct=df&amp;a=1&amp;pa=0.7537572786514851" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="img/bascImg/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a></span>			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://about.58.com/fqz/index.html?utm_source=market&amp;spm=b-31580022738699-pe-f-829.hao360_101" target="_blank"><img src="img/bascImg/bjwj.jpg" border="0"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://www.shjbzx.cn/" target="_blank"><img src="img/bascImg/shjb.jpg" border="0"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://www.12377.cn/" target="_blank"><img src="img/bascImg/zghlw.jpg" border="0" height="40"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://bj429.com.cn/" target="_blank"><img src="img/bascImg/bj_safe_20160429.jpg" border="0"></a>
+		</div>
+		<!--网页最底部链接结束-->
+	    <!--点击图片弹窗部分开始-->
+		<div class="showImg_Bgc" id="showImg_Bgc">
+		</div>
+			<div id="showImg" >
+				
+         	   <div class="showImg_data" >
+         	     <div class="peoplehead_img" id="peoplehead_img" style="background-image: url(img/best_img_all/20160708104511.jpg)">
+         	     	
+         	     </div>
+         	     <div class="showImg_data_ico">
+         	     	  
+         	     </div>
+         	     <div class="people_data" >
+         	     	<div id="popup_user_name" style="font-size: 30px; color: red;margin-top: 10px;margin-bottom: 8px;">
+         	     		瑶瑶
+         	     	</div>
+         	     	<div id="popup_datail_info" style="font-size: 16px;padding: 10px 0px;color: #333333;border-bottom: 1px solid #EEEBEB;white-space: nowrap;">
+         	     		27岁,160CM,44KG
+         	     	</div>
+         	     	
+         	     	<div id="popup_tage" style="font-size: 16px;padding:10px 0px;color: #333333;border-bottom: 1px solid #EEEBEB;white-space: nowrap;">
+         	     		看书，喝咖啡
+         	     	</div>
+         	     	<div id="popup_evaluate"style="font-size: 14px;padding: 12px 0px;color: #333333;line-height: 24px;height: 92px;overflow: hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis; ">
+         	     		佳缘眼中的TA: 她是那种骨架小却丰满的女孩子空间发的红色款共计
+         	     	</div>
+         	     </div>
+         	     
+         	</div>
+         	<div class="showImg_regest ">   
+         		    <div class="colse_showImag" id="colse_showImag" onclick="closeShowImg()">
+					×
+				    </div>
+					<form action="#" method="post">
+						<span style="position: absolute; top: 10px;font-size:30px;color:#636363;">1.7亿会员</span><h2 id="new_from_reg_title" style="margin-top: 30px;">找你所想 选你所爱</h2>
+
+						<dl>
+							<dt>性别</dt>
+							<dd>
+								<input type="radio" name="sex" id="showImg_sexM" value="m" />
+								<label for="showImg_sexM" class="nan sex" style="margin-right: 30px;">男</label>
+								<input type="radio" name="sex" id="showImg_sexF" value="f" />
+								<label for="showImg_sexF" class="nv sex">女</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt>生日</dt>
+							<dd>
+								<input type="text" name="brithyear" id="byear" /> <span style="position: absolute;left: 160px;color: #666666;">年</span>
+								<input type="text" name="brithmoon" id="bmoon" /><span style="position: absolute;left: 250px;color: #666666;">月</span>
+								<input type="text" name="brithday" id="bday" /><span style="position: absolute;left:340px;color: #666666;">日</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>所在地区</dt>
+							<dd>
+								<select name="showImg_provice" id="showImg_select_provice" onchange="changeProviceAndCity('showImg_select_provice','showImg_select_city',1)">					   
+									
+								</select>
+								<select name="showImg_city" id="showImg_select_city">
+									
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>婚姻状况</dt>
+							<dd>
+								<input type="radio" name="marriage" id="showImg_unmarried" value="unmarried" />
+								<label for="showImg_unmarried" style="margin-right: 30px;">未婚</label>
+								<input type="radio" name="marriage" id="showImg_divorce" value="divorce" />
+								<label for="showImg_divorce" style="margin-right: 30px;">离婚</label>
+								<input type="radio" name="marriage" id="showImg_bereft" value="bereft" />
+								<label for="showImg_bereft">丧偶</label>
+							</dd>
+						</dl>
+						<input type="submit" value="免费注册" id="showImg_submit" />
+						<span style="text-align: center;display: block;"><a href="#" id="isnum_login">我是会员,立即登录</a></span>
+					</form>				
+         	</div>
+         </div>
+		<!--点击图片弹窗部分结束-->
+         
 	</body>
 
 </html>
